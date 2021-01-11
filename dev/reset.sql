@@ -17,4 +17,7 @@ update metabase_database set details = '{
 }'
 where name = 'Warehouse';
 
+update setting set value = 'http://localhost:9000' where key = 'site-url';
+delete from setting where key = 'slack-token';
+
 commit;
